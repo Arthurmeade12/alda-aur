@@ -11,10 +11,18 @@ url='https://github.com/alda-lang/alda'
 license=('EPL')
 depends=('bash' 'java-runtime>=8')
 makedepends=('go' 'gradle')
+<<<<<<< HEAD
+source=("$pkgname-release-$pkgver.tar.gz::https://codeload.github.com/$pkgname-lang/$pkgname/tar.gz/refs/tags/release-$pkgver" 
+	"$pkgname-player::https://$pkgname-releases.nyc3.digitaloceanspaces.com/$pkgver/player/non-windows/$pkgname-player")
+||||||| f9142c7 (Add URL for alda-player)
+source=("$pkgname-release-$pkgver.tar.gz::https://codeload.github.com/$pkgname-lang/$pkgname/tar.gz/refs/tags/release-$pkgver" 
+	"https://$pkgname-releases.nyc3.digitaloceanspaces.com/$pkgver/player/non-windows/$pkgname-player")
+=======
 source=("$pkgname-release-$pkgver.tar.gz::https://codeload.github.com/$pkgname-lang/$pkgname/tar.gz/refs/tags/release-$pkgver"
         alda-player)
+>>>>>>> parent of f9142c7 (Add URL for alda-player)
 sha256sums=('5895896dcaea7678ae6aeefae5c49c548ff7bd23d2337985e8c1bb7fe431898d'
-            '29550c5c69f95d6eba1155e3b45430e205e8a2502f597c8c36b7b5b5a126f900')
+            'bde2d7c169cdc0d59b6ed3f8babbfa056f3a9e640adc34ea868fb9510e881c9c')
 
 prepare() {
 	cd "$pkgname-release-$pkgver/client"
